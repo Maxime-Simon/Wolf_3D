@@ -18,8 +18,8 @@ int	line_handler(t_map *map, char *line)
 
 	i = 0;
 	if (!line)
-		return(0);
-	while ((line[i] < '0' || line[i] > '9') && (line[i]))
+		return (0);
+	while ((line[i] < '0' || line[i] > '9'))
 		i++;
 	map->t_x = ft_atoi(&line[i]);
 	while (line[i] >= '0' && line[i] <= '9')

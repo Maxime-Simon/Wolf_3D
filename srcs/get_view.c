@@ -26,15 +26,15 @@ void	point(int x, int y, t_map *m)
 int		ft_color(int num, int p)
 {
 	if (num == 0)
-		return (RED + p * 256);
+		return (RED + (p * 256));
 	else if (num == 1)
 		return (GREEN + p);
 	else if (num == 2)
-		return (YELLOW - p * 256);
+		return (YELLOW - (p * 256));
 	else if (num == 3)
 		return (CYAN - p);
 	else if (num == -1)
-		return (BLACK + p + p * 256);
+		return (BLACK + p + (p * 256));
 	return (G3 + p);
 }
 
@@ -46,7 +46,7 @@ void	make_co(int h, int i, t_env *e, t_column c)
 	a = 0;
 	i = e->win_x - i;
 	color = WHITE + e->p + e->p / 3 * 256 + e->p * 256 * 256;
-	while (a < e->win_y + 1)
+	while (a < e->win_y)
 	{
 		if (a >= (e->win_y + h) / 2)
 			color = (e->p) ? e->p * (1 + 256 + 256 * 256) : G1;

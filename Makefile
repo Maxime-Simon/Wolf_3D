@@ -26,14 +26,13 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 LIBFLAGS = -lm -lmlx -L minilibx
 MLXFLAGS = -framework OpenGL -framework Appkit
-SANI = -fsanitize=address
 RM = rm -f
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 		@make -C libft/
-		@$(CC) $(CFLAGS) $(SANI) -o $(NAME) $(LIBFT) $(OBJ) $(LIBFLAGS) $(MLXFLAGS)
+		@$(CC) $(CFLAGS) -o $(NAME) $(LIBFT) $(OBJ) $(LIBFLAGS) $(MLXFLAGS)
 		@echo "\033[0;32m[OK] \033[0m\033[0;33m Compiling file:\033[0m " $@
 
 clean:

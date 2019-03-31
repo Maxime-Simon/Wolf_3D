@@ -6,7 +6,7 @@
 /*   By: apelissi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/12 13:10:07 by apelissi          #+#    #+#             */
-/*   Updated: 2019/02/21 17:02:13 by apelissi         ###   ########.fr       */
+/*   Updated: 2019/03/28 16:09:05 by apelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,15 +69,15 @@ void	make_co(int h, int i, t_env *e, t_column c)
 {
 	t_render r;
 
-	r.z = 0;
+	r.z = 0 + e->pe->pos_z;
 	r.nx = (int)c.xi % TS;
 	r.ny = (int)c.yi % TS;
 	i = e->win_x - i;
-	while (r.z < e->win_y)
+	while (r.z < e->win_y + e->pe->pos_z)
 	{
 		r.nz = ((float)r.z - (((float)e->win_y - (float)h) / 2))
 		* (TS / (float)h);
-		e->data[i + e->win_x * r.z] = render(r, h, c, e);
+		e->data[i + e->win_x * (r.z - e->pe->pos_z)] = render(r, h, c, e);
 		r.z++;
 	}
 }

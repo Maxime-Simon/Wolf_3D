@@ -6,7 +6,7 @@
 /*   By: apelissi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 17:27:55 by apelissi          #+#    #+#             */
-/*   Updated: 2019/02/20 16:37:03 by apelissi         ###   ########.fr       */
+/*   Updated: 2019/03/28 16:07:32 by apelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ typedef struct		s_column{
 typedef	struct		s_perso{
 	int				x_map;
 	int				y_map;
-	int				pos_x;
-	int				pos_y;
+	float			pos_x;
+	float			pos_y;
 	int				mv_x;
 	int				mv_y;
 	int				mv_r;

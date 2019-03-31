@@ -6,7 +6,7 @@
 /*   By: apelissi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 15:55:46 by apelissi          #+#    #+#             */
-/*   Updated: 2018/12/21 17:46:19 by apelissi         ###   ########.fr       */
+/*   Updated: 2019/03/28 16:10:48 by apelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ int	key_press(int k, t_env *e)
 		e->p = 0;
 		e->psi = (e->psi) ? 0 : 1;
 	}
+	if (k == UP && e->pe->pos_z > -740)
+		e->pe->pos_z -= 10;
+	if (k == DOWN && e->pe->pos_z < 740)
+		e->pe->pos_z += 10;
 	expose_hook(e);
 	return (0);
 }

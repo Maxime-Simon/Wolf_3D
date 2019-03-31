@@ -6,7 +6,7 @@
 /*   By: apelissi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 12:21:21 by apelissi          #+#    #+#             */
-/*   Updated: 2019/01/21 16:02:27 by maxsimon         ###   ########.fr       */
+/*   Updated: 2019/03/28 17:29:56 by apelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 #		define COLOR_H
 
 #define BLUE 255
-#define GREEN 255 * 256
-#define RED 255 * 256 * 256
+#define GREEN 65280
+#define RED 16711680
 #define BLACK 0
-#define WHITE 255 + 255 * 256 + 255 * 256 * 256
-#define CYAN 255 + 255 * 256
-#define PINK 255 + 255 * 256 * 256
-#define YELLOW 255 * 256 + 255 * 256 * 256
-#define G1 50 * (1 + 256 + 256 * 256)
-#define G2 100 * (1 + 256 + 256 * 256)
-#define G3 150 * (1 + 256 + 256 * 256)
-#define G4 200 * (1 + 256 + 256 * 256)
+#define WHITE 16777215
+#define CYAN 65535
+#define PINK 16711935
+#define YELLOW 16776960
+#define G1 3289650
+#define G2 6579300
+#define G3 9868950
+#define G4 13158600
 
 #	endif
